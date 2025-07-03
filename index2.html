@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vision Vanguards – STEM Racing Team</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar" class="navbar">
+    <a href="#hero" class="nav-logo">
+      <img src="assets/logo.png" alt="Vision Vanguards Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">Über Uns</a></li>
+      <li><a href="#workshops">Workshops</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#ausblick">Ausblick</a></li>
+      <li><a href="#tipps">Tipps</a></li>
+      <li><a href="#social">Social</a></li>
+    </ul>
+    <div class="burger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay">
+      <h1 class="fade-in-down">Vision Vanguards</h1>
+      <p class="fade-in-down delay-1">STEM Racing an der Alexander-von-Humboldt-Schule in Neumünster</p>
+      <a href="#about" class="btn fade-in-down delay-2">Mehr erfahren</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section fade-in-up">
+    <div class="container">
+      <h2>Über uns</h2>
+      <p>Vision Vanguards ist dein interdisziplinäres Schülerteam in den Bereichen Technik, Design und Marketing. Unser Ziel: ein High-Speed-Modellauto für den STEM-Racing-Wettbewerb zu entwickeln.</p>
+      <img src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg" alt="Prototyp Rennwagen">
+    </div>
+  </section>
+
+  <!-- WORKSHOPS -->
+  <section id="workshops" class="section bg-light fade-in-up delay-1">
+    <div class="container">
+      <h2>Workshops & Input</h2>
+      <ul>
+        <li>Design- & Farbtheorie mit Christiane Ladwig (goldbutt communication)</li>
+        <li>Marketing & Sponsorensuche mit Robert Köhn (K+K Steuerberatungspartner)</li>
+        <li>CAD-gestützte Fahrzeugentwicklung</li>
+        <li>Corporate Identity & Logo-Design</li>
+      </ul>
+      <img src="https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg" alt="Workshop Szene">
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="section fade-in-up delay-2">
+    <div class="container">
+      <h2>Organisation & Rollen</h2>
+      <div class="cards">
+        <div class="card"><h3>Teamleitung</h3><p>Projekt­management, Zeitpläne, Budget.</p></div>
+        <div class="card"><h3>Technik</h3><p>CAD, Prototypenbau, Tests.</p></div>
+        <div class="card"><h3>Fertigung</h3><p>CNC, Werkstoffe, Lackierung.</p></div>
+        <div class="card"><h3>Design</h3><p>Logo, Grafik, Präsentationen.</p></div>
+        <div class="card"><h3>Sponsoring</h3><p>Partner, Budgetplanung.</p></div>
+        <div class="card"><h3>PR & Events</h3><p>Presse, Schul­veranstaltungen.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUSBLICK -->
+  <section id="ausblick" class="section parallax fade-in-up delay-3">
+    <div class="overlay">
+      <h2>Ausblick & nächste Schritte</h2>
+      <ul>
+        <li>Finales Car-Design bis Juli 2025</li>
+        <li>Testläufe auf der Schul-Teststrecke</li>
+        <li>weitere regionale Partner akquirieren</li>
+        <li>Vorbereitung auf Weltfinale</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TIPPS -->
+  <section id="tipps" class="section fade-in-up delay-4">
+    <div class="container">
+      <h2>Tipps zur Weiterentwicklung</h2>
+      <ul>
+        <li>CFD-Simulationen mit Ansys durchführen</li>
+        <li>Kooperation mit Ingenieurs­büros suchen</li>
+        <li>Video-Tutorials für Social-Media erstellen</li>
+        <li>Recycelte Materialien im Prototyp einsetzen</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SOCIAL MEDIA -->
+  <section id="social" class="section bg-light fade-in-up delay-5">
+    <div class="container social-container">
+      <h2>Folgt uns auf Social Media</h2>
+      <div class="social-icons">
+        <a href="https://instagram.com/visionvanguards" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/visionvanguards" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/visionvanguards" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/company/visionvanguards" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Vision Vanguards – Alexander-von-Humboldt-Schule Neumünster</p>
+  </footer>
+
+  <script>
+    // Burger-Menu Toggle
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+      burger.classList.toggle('toggle');
+    });
+    // Navbar background on scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar')
+        .classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+
+</body>
+</html>
